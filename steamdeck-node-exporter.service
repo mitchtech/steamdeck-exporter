@@ -7,7 +7,7 @@ After=sockets.target
 Type=simple
 Restart=always
 RestartSec=10
-ExecStart=/home/deck/node_exporter/node_exporter 
+ExecStart=/home/deck/node_exporter/node_exporter --collector.wifi --collector.drm --collector.processes 
 
 [Install]
 WantedBy=default.target
