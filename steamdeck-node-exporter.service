@@ -1,0 +1,13 @@
+[Unit]
+Description=Steam Deck Prometheus Node Exporter
+After=sockets.target
+#StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/home/deck/node_exporter/node_exporter 
+
+[Install]
+WantedBy=default.target
