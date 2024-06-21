@@ -6,7 +6,7 @@ volumes:
 
 services:
   prometheus:
-    container_name: prometheusz
+    container_name: prometheus
     image: prom/prometheus:latest
     restart: unless-stopped
     command:
@@ -18,11 +18,9 @@ services:
       - "prometheus_data:/prometheus"
 
   grafana:
-    container_name: grafanaz
+    container_name: grafana
     image: grafana/grafana:latest
     restart: unless-stopped
-    env_file:
-      - .env
     volumes:
       - "./grafana/provisioning/:/etc/grafana/provisioning/"
       - "grafana_data:/var/lib/grafana"
