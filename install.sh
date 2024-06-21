@@ -5,9 +5,9 @@ NODE_EXPORTER_VERSION="1.8.0"
 NODE_EXPORTER_URL="https://github.com/prometheus/node_exporter/releases/download/v${NODE_EXPORTER_VERSION}/node_exporter-${NODE_EXPORTER_VERSION}.linux-amd64.tar.gz"
 NODE_EXPORTER_CHECKSUM_URL="https://github.com/prometheus/node_exporter/releases/download/v${NODE_EXPORTER_VERSION}/sha256sums.txt"
 TARGET_DIR="/home/deck/node_exporter"
-SERVICE_FILE="/home/deck/steamdeck-node-exporter.service"
+SERVICE_FILE="$(pwd)/steamdeck-node-exporter.service"
 SYSTEMD_USER_DIR="/home/deck/.config/systemd/user"
-LOG_FILE="/home/deck/node_exporter_setup.log"
+LOG_FILE="$(pwd)/node_exporter_setup.log"
 MAX_RETRIES=3
 REQUIRED_SPACE_MB=50
 
